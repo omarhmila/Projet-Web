@@ -4,11 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-@media (max-width: 480px) {
-    .photo-fsegs {
-        max-width: 120px;
-    }
-}
+
 
 body {
     font-family: "Segoe UI", system-ui, sans-serif;
