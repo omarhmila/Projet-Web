@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parcours Académique - Mohamed Omar Hmila</title>
+    <title>Parcours - Mohamed Omar Hmila</title>
     <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+   
+    </style>
 </head>
 <body>
 
@@ -26,45 +30,70 @@
     </header>
 
     <main>
-        <section>
+        <section class="timeline">
             <h2>Mon Parcours Académique</h2>
-            <article>
-                <table>
-                    <tr>
-                        <td>
-                 
-                <h3>2025</h3>
-                <p><strong>Licence en Informatique de Gestion</strong><br>
-                Faculté des Sciences Économiques et de Gestion de Sfax (FSEGS)</p>
-                         </td>
-                         <td>
-                         <img src="images/logo-fsegs.jpg" alt="Logo FSEGS" class="photo-fsegs">
-                         </td>
+
+            <table>
+                <tr>
+                    <td class="year">2025</td>
+                    <td class="content">
+                        <strong>Licence en Informatique de Gestion</strong><br>
+                        Faculté des Sciences Économiques et de Gestion de Sfax (FSEGS)
+                    </td>
+                    <td class="logo-cell">
+                        <img src="images/logo-fsegs.jpg" 
+                             class="logo" 
+                             alt="FSEGS" 
+                             data-diplome="images/diplomeFac.png">
+                    </td>
                 </tr>
-               </table>
-            </article>
-            <article>
-                <table >
-                    <tr>
-                        <td>
-                <h3>2022</h3>
-                <p><strong>Baccalauréat Économie et Gestion</strong><br>
-                Lycée Abou Kacem Chebbi, Sfax</p>
-                </td>
-                         <td>
-                 <img src="images/lycee.jpg" alt="Logo lycee" >
-                  </td>
+
+                <tr>
+                    <td class="year">2022</td>
+                    <td class="content">
+                        <strong>Baccalauréat Économie et Gestion</strong><br>
+                        Lycée Abou Kacem Chebbi, Sfax
+                    </td>
+                    <td class="logo-cell">
+                        <img src="images/lycee.jpg" 
+                             class="logo" 
+                             alt="Lycée" 
+                             data-diplome="images/diplomeLycee.png">
+                    </td>
                 </tr>
-               </table>
-            </article>
+            </table>
         </section>
     </main>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <span class="close">×</span>
+        <img id="modal-img" src="" alt="Diplôme">
+    </div>
 
     <footer>
         <p>2025-2026 – Mohamed Omar Hmila</p>
     </footer>
 
+    <script>
+        const modal = document.getElementById('modal');
+        const modalImg = document.getElementById('modal-img');
+        const close = document.querySelector('.close');
+
+        document.querySelectorAll('[data-diplome]').forEach(img => {
+            img.addEventListener('click', () => {
+                modalImg.src = img.dataset.diplome;
+                modal.style.display = 'flex';
+            });
+        });
+
+        close.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) modal.style.display = 'none';
+        });
+    </script>
 </body>
-
 </html>
-
