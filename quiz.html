@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz - Mohamed Omar Hmila</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Mohamed Omar Hmila</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="parcours.html">Parcours</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="experiences.html">Expériences</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="passions.html">Passions</a></li>
+                <li><a href="quiz.html" class="active">Quizz</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="temoignage.html">Témoignage IIT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Quizz : Connais-tu vraiment le développement web ?</h2>
+            <p class="intro">Réponds aux 10 questions et valide pour voir ton score et les bonnes réponses !</p>
+
+            <form id="quizForm">
+               
+                <div class="question">
+                    <p><strong>1.</strong> HTML signifie :</p>
+                    <label><input type="radio" name="q1" id="q1a" value="a"> Hyper Text Makeup Language</label><br>
+                    <label><input type="radio" name="q1" id="q1b" value="b"> HyperText Markup Language</label><br>
+                    <label><input type="radio" name="q1" id="q1c" value="c"> Home Tool Management Language</label>
+                </div>
+
+              
+                <div class="question">
+                    <p><strong>2.</strong> Quelle balise HTML5 pour le menu de navigation principal ?</p>
+                    <label><input type="radio" name="q2" id="q2a" value="a"> &lt;menu&gt;</label><br>
+                    <label><input type="radio" name="q2" id="q2b" value="b"> &lt;nav&gt;</label><br>
+                    <label><input type="radio" name="q2" id="q2c" value="c"> &lt;header&gt;</label>
+                </div>
+
+               
+                <div class="question">
+                    <p><strong>3.</strong> En CSS, pour centrer un bloc avec margin :</p>
+                    <label><input type="radio" name="q3" id="q3a" value="a"> text-align: center;</label><br>
+                    <label><input type="radio" name="q3" id="q3b" value="b"> margin: auto;</label><br>
+                    <label><input type="radio" name="q3" id="q3c" value="c"> align: center;</label>
+                </div>
+
+                
+                <div class="question">
+                    <p><strong>4.</strong> Quelle méthode JS affiche une boîte de dialogue ?</p>
+                    <label><input type="radio" name="q4" id="q4a" value="a"> console.log()</label><br>
+                    <label><input type="radio" name="q4" id="q4b" value="b"> alert()</label><br>
+                    <label><input type="radio" name="q4" id="q4c" value="c"> print()</label>
+                </div>
+
+           
+                <div class="question">
+                    <p><strong>5.</strong> Balise sémantique pour le pied de page :</p>
+                    <label><input type="radio" name="q5" id="q5a" value="a"> &lt;bottom&gt;</label><br>
+                    <label><input type="radio" name="q5" id="q5b" value="b"> &lt;footer&gt;</label><br>
+                    <label><input type="radio" name="q5" id="q5c" value="c"> &lt;end&gt;</label>
+                </div>
+
+
+                <div class="question">
+                    <p><strong>6.</strong> En JS, pour sélectionner un élément par son id :</p>
+                    <label><input type="radio" name="q6" id="q6a" value="a"> document.query("id")</label><br>
+                    <label><input type="radio" name="q6" id="q6b" value="b"> document.getElementById()</label><br>
+                    <label><input type="radio" name="q6" id="q6c" value="c"> document.findById()</label>
+                </div>
+
+              
+                <div class="question">
+                    <p><strong>7.</strong> Propriété CSS pour changer la couleur du texte :</p>
+                    <label><input type="radio" name="q7" id="q7a" value="a"> background-color</label><br>
+                    <label><input type="radio" name="q7" id="q7b" value="b"> color</label><br>
+                    <label><input type="radio" name="q7" id="q7c" value="c"> font-color</label>
+                </div>
+
+              
+                <div class="question">
+                    <p><strong>8.</strong> La boucle qui s'exécute au moins une fois :</p>
+                    <label><input type="radio" name="q8" id="q8a" value="a"> for</label><br>
+                    <label><input type="radio" name="q8" id="q8b" value="b"> while</label><br>
+                    <label><input type="radio" name="q8" id="q8c" value="c"> do...while</label>
+                </div>
+
+               
+                <div class="question">
+                    <p><strong>9.</strong> Attribut pour rendre un champ obligatoire :</p>
+                    <label><input type="radio" name="q9" id="q9a" value="a"> must</label><br>
+                    <label><input type="radio" name="q9" id="q9b" value="b"> required</label><br>
+                    <label><input type="radio" name="q9" id="q9c" value="c"> mandatory</label>
+                </div>
+
+                <div class="question">
+                    <p><strong>10.</strong> Méthode JS pour ajouter à la fin d'un tableau :</p>
+                    <label><input type="radio" name="q10" id="q10a" value="a"> push()</label><br>
+                    <label><input type="radio" name="q10" id="q10b" value="b"> add()</label><br>
+                    <label><input type="radio" name="q10" id="q10c" value="c"> append()</label>
+                </div>
+
+                <div class="quiz-actions">
+                    <button type="button" onclick="corrigerQuiz()">Valider mes réponses</button>
+                </div>
+            </form>
+
+            
+            <div id="resultat" style="display:none; margin-top:40px;">
+                <h3>Votre score : <span id="score">0</span> </h3>
+                <div id="corrections"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>2025-2026 – Mohamed Omar Hmila</p>
+    </footer>
+
+    <script>
+        function corrigerQuiz() {
+            let score = 0;
+            let html = "";
+
+         
+            if (document.getElementById("q1b").checked) {
+                score++;
+                html += "<p>Question 1 : Correct !</p>";
+            } else {
+                html += "<p>Question 1 : Faux → La bonne réponse était <strong>B</strong></p>";
+            }
+
+            if (document.getElementById("q2b").checked) {
+                score++;
+                html += "<p>Question 2 : Correct !</p>";
+            } else {
+                html += "<p>Question 2 : Faux → La bonne réponse était <strong>B</strong></p>";
+            }
+
+           
+            if (document.getElementById("q3b").checked) {
+                score++;
+                html += "<p>Question 3 : Correct !</p>";
+            } else {
+                html += "<p>Question 3 : Faux → La bonne réponse était <strong>B</strong></p>";
+            }
+
+            
+            if (document.getElementById("q4b").checked) {
+                score++;
+                html += "<p>Question 4 : Correct !</p>";
+            } else {
+                html += "<p>Question 4 : Faux → La bonne réponse était <strong>B</strong></p>";
+            }
+
+         
+            if (document.getElementById("q5b").checked) {
+                score++;
+                html += "<p>Question 5 : Correct !</p>";
+            } else {
+                html += "<p>Question 5 : Faux → La bonne réponse était <strong>B</strong></p>";
+            }
+
+            
+            if (document.getElementById("q6b").checked) {
+                score++;
+                html += "<p>Question 6 : Correct !</p>";
+            } else {
+                html += "<p>Question 6 : Faux → La bonne réponse était <strong>B</strong></p>";
+            }
+
+        
+            if (document.getElementById("q7b").checked) {
+                score++;
+                html += "<p>Question 7 : Correct !</p>";
+            } else {
+                html += "<p>Question 7 : Faux → La bonne réponse était <strong>B</strong></p>";
+            }
+
+           
+            if (document.getElementById("q8c").checked) {
+                score++;
+                html += "<p>Question 8 : Correct !</p>";
+            } else {
+                html += "<p>Question 8 : Faux → La bonne réponse était <strong>C</strong></p>";
+            }
+
+            
+            if (document.getElementById("q9b").checked) {
+                score++;
+                html += "<p>Question 9 : Correct !</p>";
+            } else {
+                html += "<p>Question 9 : Faux → La bonne réponse était <strong>B</strong></p>";
+            }
+
+            
+            if (document.getElementById("q10a").checked) {
+                score++;
+                html += "<p>Question 10 : Correct !</p>";
+            } else {
+                html += "<p>Question 10 : Faux → La bonne réponse était <strong>A</strong></p>";
+            }
+
+            
+            document.getElementById("score").innerHTML = score + " / 10";
+
+            let message = "";
+            if (score === 10) message = "Parfait ! Tu es un expert !";
+            else if (score >= 7) message = "Très bien ! Solides bases.";
+            else if (score >= 4) message = "Pas mal, continue !";
+            else message = "Courage, tu progresses vite !";
+
+            document.getElementById("corrections").innerHTML = 
+                "<p style='font-size:1.4em; color:#1e3a5f; text-align:center; margin:20px 0;'>" + 
+                message + 
+                "</p>" +
+                "<div style='margin-top:15px;'>" + html + "</div>";
+
+            document.getElementById("resultat").style.display = "block";
+
+          
+            document.getElementById("resultat").scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+
+</body>
+</html>
